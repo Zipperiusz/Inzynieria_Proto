@@ -8,6 +8,18 @@ public class Bilet {
 	protected int NumerBiletu { get; }
 	protected string? KodQR { get; }
 
+	Bilet(float _cena, string? _typUlgi, string _status, DateTime _waznyOd, float? _procentUlgi=null, int _numerBiletu, string? _kodQR=null){
+		Cena=_cena;
+		TypUlgi=_typUlgi;
+		Status=_status;
+		WaznyOd=_waznyOd;
+		ProcentUlgi=_procentUlgi;
+		NumerBiletu=_numerBiletu;
+		KodQR=_kodQR;
+	}
+
+
+
 	public bool KupBilet() {
 		// TODO - implement Bilet.KupBilet
 		throw new NotImplementedException();

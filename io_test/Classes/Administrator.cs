@@ -1,4 +1,4 @@
-public class Administrator {
+public static class Administrator {
 
 	public bool DodajPrzewoznika() {
 		// TODO - implement Administrator.DodajPrzewoznika

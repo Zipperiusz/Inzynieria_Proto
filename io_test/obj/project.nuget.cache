@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r5Y5oXHULCfN0hiPOKiHGfjwUAUk43/ctYqU7eOHuxSd8x56JyZdV+/kl59tIZSptg6Ennd+MuelTtajAOJc3w==",
+  "dgSpecHash": "UzwGXcwWDlqFA44I2rVC59CZBYhDtdKL/Uw7fdHxWjHF5DsCN4tEuvOQbjhvlg5bXjvQF3WhHRzy/vQ+k65TGQ==",
   "success": true,
-  "projectFilePath": "C:\\Studia\\inzynieria oprogramowania\\io_test\\io_test.csproj",
+  "projectFilePath": "C:\\Studia\\inzynieria oprogramowania\\Inzynieria_Proto\\io_test\\io_test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Laptoperiusz\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Laptoperiusz\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
