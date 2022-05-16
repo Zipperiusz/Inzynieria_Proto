@@ -5,6 +5,13 @@ public class Transakcja {
 	protected DateTime DataZakupu { get; }
 	protected string MetodaPlatnosci { get; }
 
+	Transakcja(float _koszt, int _numerTransakcji, DateTime _dataZakupu, string _metodaPlatnosci)
+    {
+		Koszt = _koszt;
+		NumerTransakcji = _numerTransakcji;
+		DataZakupu = _dataZakupu;
+		MetodaPlatnosci = _metodaPlatnosci;
+    }
 	public bool WygenerujBilet() {
 		// TODO - implement Tranzakcja.WygenerujBilet
 		throw new NotImplementedException();

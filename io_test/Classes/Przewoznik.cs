@@ -1,9 +1,16 @@
 
 public class Przewoznik {
 
-	List<Pociag> Pociags { get; }
+	List<Pociag> Pociagi { get; }
 	protected int NumerPrzewoznika { get; }
 	protected string Nazwa { get; }
+	
+	Przewoznik(List<Pociag> _pociagi, int _numerPrzewoznika, string _nazwa)
+    {
+		Pociagi = _pociagi;
+		NumerPrzewoznika = _numerPrzewoznika;
+		Nazwa = _nazwa;
+    }
 
 	public bool EdytujHarmonogram() {
 		// TODO - implement Przwoznik.EdytujHarmonogram
