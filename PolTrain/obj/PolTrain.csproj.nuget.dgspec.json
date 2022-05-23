@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Studia\\inzynieria oprogramowania\\Inzynieria_Proto\\PolTrain\\PolTrain.csproj": {}
+    "C:\\Users\\buszt\\OneDrive\\Pulpit\\Inżynieria oprogramowania\\Prototyp\\Inzynieria_Proto\\PolTrain\\PolTrain.csproj": {}
   },
   "projects": {
-    "C:\\Studia\\inzynieria oprogramowania\\Inzynieria_Proto\\PolTrain\\PolTrain.csproj": {
+    "C:\\Users\\buszt\\OneDrive\\Pulpit\\Inżynieria oprogramowania\\Prototyp\\Inzynieria_Proto\\PolTrain\\PolTrain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Studia\\inzynieria oprogramowania\\Inzynieria_Proto\\PolTrain\\PolTrain.csproj",
+        "projectUniqueName": "C:\\Users\\buszt\\OneDrive\\Pulpit\\Inżynieria oprogramowania\\Prototyp\\Inzynieria_Proto\\PolTrain\\PolTrain.csproj",
         "projectName": "PolTrain",
-        "projectPath": "C:\\Studia\\inzynieria oprogramowania\\Inzynieria_Proto\\PolTrain\\PolTrain.csproj",
-        "packagesPath": "C:\\Users\\Laptoperiusz\\.nuget\\packages\\",
-        "outputPath": "C:\\Studia\\inzynieria oprogramowania\\Inzynieria_Proto\\PolTrain\\obj\\",
+        "projectPath": "C:\\Users\\buszt\\OneDrive\\Pulpit\\Inżynieria oprogramowania\\Prototyp\\Inzynieria_Proto\\PolTrain\\PolTrain.csproj",
+        "packagesPath": "C:\\Users\\buszt\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\buszt\\OneDrive\\Pulpit\\Inżynieria oprogramowania\\Prototyp\\Inzynieria_Proto\\PolTrain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Laptoperiusz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\buszt\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

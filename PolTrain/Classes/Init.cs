@@ -21,23 +21,21 @@ namespace PolTrain.Classes
             wagony.Add(w4);
             wagony.Add(w5);
             wagony.Add(w6);
+
+            List<Miejsce> miejsca = new List<Miejsce>();
+
+            for (int j = 1; j <= 20; j++)
+            {
+                miejsca.Add(new Miejsce(j, false, false, w1));
+            }
+
+
             return wagony;
         }
         public static Pociag CreatePociag()
         {           
             return new Pociag("Szczeciniak", 6, 23323, CreateWagon());
         }
-        public static List<Miejsce> CreateMiejsca(int ilosc)
-        {
-            List<Miejsce> miejsca=new List<Miejsce>();
 
-            for (int j = 1; j <= ilosc; j++)
-            {
-                miejsca.Add(new Miejsce(j, false, false));
-            }
-
-            return miejsca;
-        }
-        public static 
     }
 }

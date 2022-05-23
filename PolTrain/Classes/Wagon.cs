@@ -19,7 +19,7 @@ namespace PolTrain.Classes
         //TRUE- udalo sie zajac miejce FALSE- nie udalo sie zajac miejsca
         public bool ZajmijMiejsce(Miejsce zajmowaneMiejsce)
         {
-            if (WolneMiejsca > 0 & zajmowaneMiejsce.Zajete == false)
+            if (WolneMiejsca > 0 & zajmowaneMiejsce.Zajete == false & Miejsca.Contains(zajmowaneMiejsce))
             {
                 zajmowaneMiejsce.Zajete = true;
                 WolneMiejsca -= 1;
@@ -31,7 +31,7 @@ namespace PolTrain.Classes
         //TRUE- udalo sie zwolnic miejce, FALSE- nie udalo sie zwolnic miejsca
         public bool ZwolnijMiejsce(Miejsce zwalnianeMiejsce)
         {
-            if(ZajeteMiejsca>0 & zwalnianeMiejsce.Zajete == true)
+            if(ZajeteMiejsca > 0 & zwalnianeMiejsce.Zajete == true & Miejsca.Contains(zwalnianeMiejsce))
             {
                 zwalnianeMiejsce.Zajete = false;
                 WolneMiejsca += 1;
