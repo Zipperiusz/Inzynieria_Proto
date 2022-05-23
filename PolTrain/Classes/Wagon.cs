@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace PolTrain.Classes
 {
@@ -7,13 +8,20 @@ namespace PolTrain.Classes
 
         protected int Klasa { get; }
         protected int IloscMiejsc { get; }
-        protected int WolneMiejsca { get; }
+        protected int WolneMiejsca { get; set; }
         protected int ZajeteMiejsca { get; }
         protected string TypWagonu { get; }
         protected int NumerWagonu { get; }
+        
 
-        public bool ZajmijMiejsce()
+
+        public bool ZajmijMiejsce(Miejsce zajmowaneMiejsce)
         {
+            if (WolneMiejsca > 0 & zajmowaneMiejsce.Zajete == false)
+            {
+                zajmowaneMiejsce.Zajete = true;
+                WolneMiejsca -= 1;
+            }
             // TODO - implement Wagon.zajmijMiejsce
             throw new NotImplementedException();
         }
