@@ -14,22 +14,29 @@ namespace PolTrain.Classes
         protected int NumerWagonu { get; }
         
 
-
+        //TRUE- udalo sie zajac miejce FALSE- nie udalo sie zajac miejsca
         public bool ZajmijMiejsce(Miejsce zajmowaneMiejsce)
         {
             if (WolneMiejsca > 0 & zajmowaneMiejsce.Zajete == false)
             {
                 zajmowaneMiejsce.Zajete = true;
                 WolneMiejsca -= 1;
+                return true;
             }
-            // TODO - implement Wagon.zajmijMiejsce
-            throw new NotImplementedException();
+            return false;
         }
 
-        public bool ZwolnijMiejsce()
+        //TRUE- udalo sie zwolnic miejce, FALSE- nie udalo sie zwolnic miejsca
+        public bool ZwolnijMiejsce(Miejsce zwalnianeMiejsce)
         {
-            // TODO - implement Wagon.zwolnijMiejsce
-            throw new NotImplementedException();
+            if(ZajeteMiejsca>0 & zwalnianeMiejsce.Zajete == true)
+            {
+                zwalnianeMiejsce.Zajete = false;
+                WolneMiejsca += 1;
+                return true;
+            }
+            return false;
+
         }
 
         public Wagon(int _klasa, int _iloscMiejsc, int _wolneMiejsce, int _zajeteMiejsca, string _typWagonu, int _numerWagonu)
