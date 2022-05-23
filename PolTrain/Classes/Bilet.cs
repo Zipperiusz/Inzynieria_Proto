@@ -54,10 +54,15 @@ namespace PolTrain.Classes
             throw new NotImplementedException();
         }
 
-        public Bilet ObejrzyjBilet()
+        public void ObejrzyjBilet(Bilet bilet)
         {
-            // TODO - implement Bilet.ObejrzyjBilet
-            throw new NotImplementedException();
+            Console.WriteLine("Cena: " + bilet.Cena);
+            Console.WriteLine("Typ ulgi: " + bilet.TypUlgi);
+            Console.WriteLine("Status: " + bilet.Status);
+            Console.WriteLine("Wazny od: " + bilet.WaznyOd);
+            Console.WriteLine("Procent ulgi: " + bilet.ProcentUlgi);
+            Console.WriteLine("Numer biletu: " + bilet.NumerBiletu);
+            Console.WriteLine("Kod QR: " + bilet.KodQR);
         }
 
 
