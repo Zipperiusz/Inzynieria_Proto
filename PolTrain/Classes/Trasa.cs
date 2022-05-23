@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace PolTrain.Classes
 {
@@ -10,6 +11,8 @@ namespace PolTrain.Classes
         protected float Dlugosc { get; }
         protected int IloscKupionychBiletow { get; }
         protected int NumerTrasy { get; }
+        protected List<Stacja> Stacje { get; }
+
 
         public Trasa(Stacja _stacjaPocz, Stacja _stacjaKon, float _dlugosc, int _iloscKupionychBiletow, int _numerTrasy)
         {

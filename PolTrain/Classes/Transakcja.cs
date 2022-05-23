@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace PolTrain.Classes
 {
@@ -9,6 +10,8 @@ namespace PolTrain.Classes
         protected int NumerTransakcji { get; }
         protected DateTime DataZakupu { get; }
         protected string MetodaPlatnosci { get; }
+        protected Klient Klient { get; }
+        protected List<Bilet> Bilety { get; }
 
         public Transakcja(float _koszt, int _numerTransakcji, DateTime _dataZakupu, string _metodaPlatnosci)
         {
@@ -17,11 +20,7 @@ namespace PolTrain.Classes
             DataZakupu = _dataZakupu;
             MetodaPlatnosci = _metodaPlatnosci;
         }
-        public bool WygenerujBilet()
-        {
-            // TODO - implement Tranzakcja.WygenerujBilet
-            throw new NotImplementedException();
-        }
+        
 
         public void ZapiszTranzakcje()
         {

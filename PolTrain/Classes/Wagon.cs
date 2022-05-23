@@ -12,6 +12,8 @@ namespace PolTrain.Classes
         protected int ZajeteMiejsca { get; }
         protected string TypWagonu { get; }
         protected int NumerWagonu { get; }
+        protected Pociag Pociag { get; }
+        protected List<Miejsce> Miejsca { set; get; } 
         
 
         //TRUE- udalo sie zajac miejce FALSE- nie udalo sie zajac miejsca

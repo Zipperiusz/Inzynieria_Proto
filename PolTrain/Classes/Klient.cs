@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace PolTrain.Classes
 {
@@ -13,6 +14,7 @@ namespace PolTrain.Classes
         protected string Nazwisko { get; }
         protected string TypUlgi { get; }
 
+        protected List<Transakcja> Transakcje { get; }
         public Klient(string _nazwa, string _email, string _haslo, int _numerKlienta, string _imie, string _nazwisko, string _typUlgi = null)
         {
             Nazwa = _nazwa;

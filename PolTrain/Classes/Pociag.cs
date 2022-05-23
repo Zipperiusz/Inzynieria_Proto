@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace PolTrain.Classes
 {
     public class Pociag
@@ -6,11 +8,14 @@ namespace PolTrain.Classes
         protected string Nazwa { get; }
         protected int IloscWagonow { get; }
         protected int NumerPociagu { get; }
-        public Pociag(string _nazwa, int _iloscWagonow, int _numerPociagu)
+        protected Przewoznik Przewoznik { get; }
+        public List<Wagon> Wagony { get;  set; }
+        public Pociag(string _nazwa, int _iloscWagonow, int _numerPociagu, List<Wagon> _wagony)
         {
             Nazwa = _nazwa;
             IloscWagonow = _iloscWagonow;
             NumerPociagu = _numerPociagu;
+            Wagony= _wagony;
         }
     }
 }

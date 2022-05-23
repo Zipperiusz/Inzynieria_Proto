@@ -9,7 +9,8 @@ namespace PolTrain.Classes
         protected DateTime CzasOdjazdu { get; }
         protected DateTime CzasPrzyjazdu { get; }
         protected int NumerStacji { get; }
-
+        protected Trasa Trasa { get; }
+        protected Polaczenie Polaczenie { get; }
         public Stacja(string _nazwa, DateTime _czasOdjazdu, DateTime _czasPrzyjazdu, int _numerStacji)
         {
             Nazwa = _nazwa;

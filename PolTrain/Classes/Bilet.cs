@@ -13,6 +13,8 @@ namespace PolTrain.Classes
         protected float? ProcentUlgi { get; }
         protected int NumerBiletu { get; }
         protected string KodQR { get; }
+        Transakcja Transakcja { get; }
+        protected List<Miejsce> Miejsca { get; }
 
         public Bilet(float _cena, string _status, DateTime _waznyOd, int _numerBiletu, float? _procentUlgi = null, string _kodQR = null, string _typUlgi = null)
         {
@@ -27,9 +29,16 @@ namespace PolTrain.Classes
 
 
 
-        public bool KupBilet()
+        public bool KupBilet(Miejsce _miejsce,string _typUlgi,float? _ProcentUlgi, float _cena)
         {
-            // TODO - implement Bilet.KupBilet
+            
+
+            return true;
+        }
+
+        public bool WygenerujBilet()
+        {
+            // TODO - implement Tranzakcja.WygenerujBilet
             throw new NotImplementedException();
         }
 
@@ -52,12 +61,7 @@ namespace PolTrain.Classes
         }
 
 
-        public Miejsce GetMiejsce()
-        {
-            // TODO - implement Bilet.getMiejsce
-            throw new NotImplementedException();
-        }
-
+       
 
     }
 }
