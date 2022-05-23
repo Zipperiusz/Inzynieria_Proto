@@ -1,11 +1,16 @@
-public class Miejsce {
+namespace PolTrain.Classes
+{
+    public class Miejsce
+    {
 
-	protected int NumerMiejsca;
-	protected bool Specjalne;
+        protected int NumerMiejsca;
+        protected bool Specjalne;
 
-	Miejsce(int _numerMiejsca, bool _specjalne){
-		NumerMiejsca=_numerMiejsca;
-		Specjalne=_specjalne;
-	}
+        public Miejsce(int _numerMiejsca, bool _specjalne)
+        {
+            NumerMiejsca = _numerMiejsca;
+            Specjalne = _specjalne;
+        }
 
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PolTrain.Classes;
+using System;
 
 namespace PolTrain
 {
@@ -7,6 +8,8 @@ namespace PolTrain
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            Bilet bw = new(5, "", DateTime.Now,5);
+            bw.KupBilet();
         }
     }
 }

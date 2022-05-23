@@ -1,0 +1,16 @@
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\bin\Debug\net5.0\PolTrain.exe
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\bin\Debug\net5.0\PolTrain.deps.json
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\bin\Debug\net5.0\PolTrain.runtimeconfig.json
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\bin\Debug\net5.0\PolTrain.runtimeconfig.dev.json
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\bin\Debug\net5.0\PolTrain.dll
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\bin\Debug\net5.0\ref\PolTrain.dll
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\bin\Debug\net5.0\PolTrain.pdb
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\PolTrain.csproj.AssemblyReference.cache
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\PolTrain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\PolTrain.AssemblyInfoInputs.cache
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\PolTrain.AssemblyInfo.cs
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\PolTrain.csproj.CoreCompileInputs.cache
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\PolTrain.dll
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\ref\PolTrain.dll
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\PolTrain.pdb
+C:\Studia\inzynieria oprogramowania\Inzynieria_Proto\PolTrain\obj\Debug\net5.0\PolTrain.genruntimeconfig.cache

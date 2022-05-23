@@ -1,16 +1,22 @@
-public class Stacja {
+using System;
 
-	protected string Nazwa { get; }
-	protected DateTime CzasOdjazdu { get; }
-	protected DateTime CzasPrzyjazdu { get; }
-	protected int NumerStacji { get; }
-
-	Stacja(string _nazwa, DateTime _czasOdjazdu, DateTime _czasPrzyjazdu, int _numerStacji)
+namespace PolTrain.Classes
+{
+    public class Stacja
     {
-		Nazwa = _nazwa;
-		CzasOdjazdu = _czasOdjazdu;
-		CzasPrzyjazdu = _czasPrzyjazdu;
-		NumerStacji = _numerStacji;
-    }
 
+        protected string Nazwa { get; }
+        protected DateTime CzasOdjazdu { get; }
+        protected DateTime CzasPrzyjazdu { get; }
+        protected int NumerStacji { get; }
+
+        public Stacja(string _nazwa, DateTime _czasOdjazdu, DateTime _czasPrzyjazdu, int _numerStacji)
+        {
+            Nazwa = _nazwa;
+            CzasOdjazdu = _czasOdjazdu;
+            CzasPrzyjazdu = _czasPrzyjazdu;
+            NumerStacji = _numerStacji;
+        }
+
+    }
 }
