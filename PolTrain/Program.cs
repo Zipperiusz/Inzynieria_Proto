@@ -9,6 +9,12 @@ namespace PolTrain
         {
             Console.WriteLine("Hello World!");
 
+            var wagon = Init.CreateWagon();
+            foreach(var item in wagon)
+            {
+                Console.WriteLine(item.WolneMiejsca);
+            }
+
         }
     }
 }
