@@ -6,9 +6,9 @@ namespace PolTrain.Classes
     public class Bilet
     {
 
-        protected float Cena { get; }
+        protected float Cena { get; set; }
         protected string TypUlgi { get; }
-        protected string Status { get; }
+        protected string Status { get; set; }
         protected DateTime WaznyOd { get; }
         protected float? ProcentUlgi { get; }
         protected int NumerBiletu { get; }
@@ -28,12 +28,24 @@ namespace PolTrain.Classes
         }
 
 
-
-        public bool KupBilet(Miejsce _miejsce,string _typUlgi,float? _ProcentUlgi, float _cena)
+        // True udalo sie kupic , False - nie udalo sie kupic
+        public bool KupBilet(Miejsce _miejsce, Wagon wagon, string _typUlgi, float? _ProcentUlgi, float _cena)
         {
-            
+            if (wagon.ZajmijMiejsce(_miejsce))
+            {
+                if(_ProcentUlgi != null)
+                {
+                    this.Cena = ((float)_cena * (1-(float)_ProcentUlgi));
+                }
+                else
+                {
+                    this.Cena = _cena;
+                }
+                this.Status = "zakupiony";
+                return true;
+            }
 
-            return true;
+            return false;
         }
 
         public bool WygenerujBilet()
@@ -42,10 +54,15 @@ namespace PolTrain.Classes
             throw new NotImplementedException();
         }
 
-        public bool ZwrocBilet()
+        // True udalo sie zwrocic bilet, False - nie udalo sie zwrocic biletu
+        public bool ZwrocBilet(Miejsce _miejsce, Wagon wagon)
         {
-            // TODO - implement Bilet.ZwrocBilet
-            throw new NotImplementedException();
+            if (wagon.ZwolnijMiejsce(_miejsce))
+            {
+                this.Status = "zwrócony";
+                return true;
+            }
+            return false;
         }
 
         public List<Bilet> WyszukajBilet()
