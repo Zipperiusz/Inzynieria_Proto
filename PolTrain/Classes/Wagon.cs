@@ -14,20 +14,28 @@ namespace PolTrain.Classes
         public int NumerWagonu { get; }
         protected Pociag Pociag { get; }
         public List<Miejsce> Miejsca { set; get; } 
-        public Wagon(int _klasa, int _iloscMiejsc, int _wolneMiejsca, string _typWagonu, int _numerWagonu)
+        public Wagon(int _klasa, string _typWagonu, int _numerWagonu, List<Miejsce> _miejsca= null)
         {
             Klasa = _klasa;
-            IloscMiejsc = _iloscMiejsc;
-            WolneMiejsca = _wolneMiejsca;
-            ZajeteMiejsca = _iloscMiejsc- _wolneMiejsca;
             TypWagonu = _typWagonu;
             NumerWagonu = _numerWagonu;
+            if (_miejsca != null)
+            {
+                Miejsca = _miejsca;
+                foreach(Miejsce miejsce in Miejsca)
+                {
+                    IloscMiejsc = Miejsca.Count;
+                    if (miejsce.Zajete) ZajeteMiejsca++;
+                    miejsce.Wagon = this;
+                }
+                WolneMiejsca = IloscMiejsc - ZajeteMiejsca;
+            }
         }
 
 
         /// <summary>
-        /// Zwraca <c>True</c> jeœli zajmowanie miejsca zakoñczy³o siê pomyœlnie.
-        /// <c>False</c> w przypadku gdy nie uda³o siê zaj¹æ miejsca.
+        /// Zwraca <c>True</c> jeï¿½li zajmowanie miejsca zakoï¿½czyï¿½o siï¿½ pomyï¿½lnie.
+        /// <c>False</c> w przypadku gdy nie udaï¿½o siï¿½ zajï¿½ï¿½ miejsca.
         /// </summary>
         public bool ZajmijMiejsce(Miejsce zajmowaneMiejsce)
         {
@@ -41,8 +49,8 @@ namespace PolTrain.Classes
         }
 
         /// <summary>
-        /// Zwraca <c>True</c> jeœli zwalnianie miejsca zakoñczy³o siê pomyœlnie.
-        /// <c>False</c> w przypadku gdy nie uda³o siê zwolniæ miejsca.
+        /// Zwraca <c>True</c> jeï¿½li zwalnianie miejsca zakoï¿½czyï¿½o siï¿½ pomyï¿½lnie.
+        /// <c>False</c> w przypadku gdy nie udaï¿½o siï¿½ zwolniï¿½ miejsca.
         /// </summary>
         public bool ZwolnijMiejsce(Miejsce zwalnianeMiejsce)
         {
