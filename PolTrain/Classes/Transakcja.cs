@@ -19,8 +19,6 @@ namespace PolTrain.Classes
             NumerTransakcji = _numerTransakcji;
             DataZakupu = _dataZakupu;
             MetodaPlatnosci = _metodaPlatnosci;
-            Klient = _klient;
-            Bilety = _bilety;
         }
         public Transakcja(Klient _klient, string _metodaPlatnosci)
         {
