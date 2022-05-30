@@ -6,16 +6,17 @@ namespace PolTrain.Classes
     public class Klient
     {
 
-        protected string Nazwa { get; }
-        protected string Email { get; }
-        protected string Haslo;
-        protected int NumerKlienta { get; }
-        protected string Imie { get; }
-        protected string Nazwisko { get; }
-        protected string TypUlgi { get; }
+        public string Nazwa { get; }
+        public string Email { get; }
+        public string Haslo;
+        public int NumerKlienta { get; }
+        public string Imie { get; }
+        public string Nazwisko { get; }
+        public string TypUlgi { get; }
+        public float? ProcentUlgi { get; }
 
         protected List<Transakcja> Transakcje { get; }
-        public Klient(string _nazwa, string _email, string _haslo, int _numerKlienta, string _imie, string _nazwisko, string _typUlgi = null)
+        public Klient(string _nazwa, string _email, string _haslo, int _numerKlienta, string _imie, string _nazwisko, float? _procentUlgi=null, string _typUlgi = null)
         {
             Nazwa = _nazwa;
             Email = _email;

@@ -28,7 +28,7 @@ namespace PolTrain.Classes
 
         public Bilet() { }
         // True udalo sie kupic , False - nie udalo sie kupic
-        public bool KupBilet(Miejsce _miejsce, Wagon wagon, float? _ProcentUlgi, float _cena)
+        public bool KupBilet(Miejsce _miejsce, Wagon wagon, float _cena, float? _ProcentUlgi=null)
         {
             if (wagon.ZajmijMiejsce(_miejsce))
             {

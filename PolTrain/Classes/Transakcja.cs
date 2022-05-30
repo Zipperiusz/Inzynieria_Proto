@@ -8,10 +8,10 @@ namespace PolTrain.Classes
 
         public float Koszt { get; }
         public int NumerTransakcji { get; }
-        public DateTime DataZakupu { get; }
-        public string MetodaPlatnosci { get; }
-        public Klient Klient { get; }
-        public List<Bilet> Bilety { get; }
+        public DateTime DataZakupu { get; protected set; }
+        public string MetodaPlatnosci { get; protected set; }
+        public Klient Klient { get; protected set; }
+        public List<Bilet> Bilety { get; protected set; }
 
         public Transakcja(float _koszt, int _numerTransakcji, DateTime _dataZakupu, string _metodaPlatnosci, Klient _klient, List<Bilet> _bilety)
         {
@@ -22,10 +22,23 @@ namespace PolTrain.Classes
             Klient = _klient;
             Bilety = _bilety;
         }
-
-        public bool WygenerujBilet()
+        public Transakcja(Klient _klient, string _metodaPlatnosci)
         {
-            //Bilet bilet = new Bilet();
+            Klient = _klient;
+            MetodaPlatnosci = _metodaPlatnosci;
+        }
+        public bool WygenerujBilet(Miejsce _miejsce,Wagon _wagon,float _cena)
+        {
+            
+
+            Bilet bilet = new Bilet();
+
+            if(bilet.KupBilet(_miejsce, _wagon, _cena, Klient.ProcentUlgi))
+            {
+                DataZakupu = DateTime.Now;
+                Bilety.Add(bilet);
+                return true;
+            }
             return false;
         }
 
