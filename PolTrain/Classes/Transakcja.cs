@@ -19,18 +19,8 @@ namespace PolTrain.Classes
             NumerTransakcji = _numerTransakcji;
             DataZakupu = _dataZakupu;
             MetodaPlatnosci = _metodaPlatnosci;
-            Klient = _klient;
-            Bilety = _bilety;
-<<<<<<< HEAD
-=======
         }
-
-        public bool WygenerujBilet()
-        {
-            //Bilet bilet = new Bilet();
-            return false;
->>>>>>> e53d8a61bf147a737b69c9d9580e29f7f9552dfe
-        }
+        
 
         public void ZapiszTranzakcje()
         {
