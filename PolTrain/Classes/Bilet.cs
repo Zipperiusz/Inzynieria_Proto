@@ -5,6 +5,8 @@ namespace PolTrain.Classes
 {
     public class Bilet
     {
+        private Miejsce miejsce;
+        private Wagon wagon;
 
         public float Cena { get; set; }
         public string TypUlgi { get; }
@@ -27,6 +29,15 @@ namespace PolTrain.Classes
         }
 
         public Bilet() { }
+
+        public Bilet(Miejsce miejsce, Wagon wagon, float cena, float? procentUlgi)
+        {
+            this.miejsce = miejsce;
+            this.wagon = wagon;
+            Cena = cena;
+            ProcentUlgi = procentUlgi;
+        }
+
         // True udalo sie kupic , False - nie udalo sie kupic
         public bool KupBilet(Miejsce _miejsce, Wagon wagon, float _cena, float? _ProcentUlgi=null)
         {

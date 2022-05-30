@@ -113,6 +113,11 @@ namespace PolTrain.Classes
             return new Klient("JanKowalski","jan.kowalski@gmail.com","1234",1, "Jan", "Kowalski");
         }
 
+        public static Bilet CreateBilet(Miejsce miejsce, Wagon wagon, float _cena, float? _ProcentUlgi = null)
+        {
+            return new Bilet(miejsce, wagon, _cena, _ProcentUlgi);
+        }
+
         /*public static Transakcja CreateTransakcja()
         {
             return new Transakcja("")
