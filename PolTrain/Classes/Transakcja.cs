@@ -6,12 +6,12 @@ namespace PolTrain.Classes
     public class Transakcja
     {
 
-        protected float Koszt { get; }
-        protected int NumerTransakcji { get; }
-        protected DateTime DataZakupu { get; }
-        protected string MetodaPlatnosci { get; }
-        protected Klient Klient { get; }
-        protected List<Bilet> Bilety { get; }
+        public float Koszt { get; }
+        public int NumerTransakcji { get; }
+        public DateTime DataZakupu { get; }
+        public string MetodaPlatnosci { get; }
+        public Klient Klient { get; }
+        public List<Bilet> Bilety { get; }
 
         public Transakcja(float _koszt, int _numerTransakcji, DateTime _dataZakupu, string _metodaPlatnosci, Klient _klient, List<Bilet> _bilety)
         {
@@ -21,8 +21,16 @@ namespace PolTrain.Classes
             MetodaPlatnosci = _metodaPlatnosci;
             Klient = _klient;
             Bilety = _bilety;
+<<<<<<< HEAD
+=======
         }
-        
+
+        public bool WygenerujBilet()
+        {
+            //Bilet bilet = new Bilet();
+            return false;
+>>>>>>> e53d8a61bf147a737b69c9d9580e29f7f9552dfe
+        }
 
         public void ZapiszTranzakcje()
         {

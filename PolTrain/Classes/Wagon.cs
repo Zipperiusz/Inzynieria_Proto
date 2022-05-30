@@ -9,10 +9,10 @@ namespace PolTrain.Classes
         public int Klasa { get; }
         public int IloscMiejsc { get; }
         public int WolneMiejsca { get; protected set; }
-        public int ZajeteMiejsca { get; }
+        public int ZajeteMiejsca { get; protected set; }
         public string TypWagonu { get; }
         public int NumerWagonu { get; }
-        protected Pociag Pociag { get; }
+        public Pociag Pociag { get; }
         public List<Miejsce> Miejsca { set; get; } 
         public Wagon(int _klasa, string _typWagonu, int _numerWagonu, List<Miejsce> _miejsca= null)
         {
@@ -42,7 +42,8 @@ namespace PolTrain.Classes
             if (WolneMiejsca > 0 & zajmowaneMiejsce.Zajete == false & Miejsca.Contains(zajmowaneMiejsce))
             {
                 zajmowaneMiejsce.Zajete = true;
-                WolneMiejsca -= 1;
+                WolneMiejsca--;
+                ZajeteMiejsca++;
                 return true;
             }
             return false;
@@ -57,7 +58,8 @@ namespace PolTrain.Classes
             if(ZajeteMiejsca > 0 & zwalnianeMiejsce.Zajete == true & Miejsca.Contains(zwalnianeMiejsce))
             {
                 zwalnianeMiejsce.Zajete = false;
-                WolneMiejsca += 1;
+                WolneMiejsca++;
+                ZajeteMiejsca--;
                 return true;
             }
             return false;

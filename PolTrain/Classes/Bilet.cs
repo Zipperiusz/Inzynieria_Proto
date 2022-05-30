@@ -6,60 +6,56 @@ namespace PolTrain.Classes
     public class Bilet
     {
 
-        protected float Cena { get; set; }
-        protected string TypUlgi { get; }
-        protected string Status { get; set; }
-        protected DateTime WaznyOd { get; }
-        protected float? ProcentUlgi { get; }
-        protected int NumerBiletu { get; }
-        protected string KodQR { get; }
-        Transakcja Transakcja { get; }
-        protected List<Miejsce> Miejsca { get; }
+        public float Cena { get; set; }
+        public string TypUlgi { get; }
+        public string Status { get; set; }
+        public DateTime WaznyOd { get; set; }
+        public float? ProcentUlgi { get; }
+        public int NumerBiletu { get; }
+        public string KodQR { get; }
+        public List<Miejsce> Miejsca { get; }
 
-        public Bilet(float _cena, string _status, DateTime _waznyOd, int _numerBiletu, float? _procentUlgi = null, string _kodQR = null, string _typUlgi = null)
+        public Bilet(float _cena, string _status, DateTime _waznyOd, int _numerBiletu, List<Miejsce> _miejsca, float? _procentUlgi = null, string _kodQR = null, string _typUlgi = null)
         {
             Cena = _cena;
             TypUlgi = _typUlgi;
             Status = _status;
             WaznyOd = _waznyOd;
             ProcentUlgi = _procentUlgi;
-            NumerBiletu = _numerBiletu;
             KodQR = _kodQR;
+            Miejsca = _miejsca;
         }
 
-
+        public Bilet() { }
         // True udalo sie kupic , False - nie udalo sie kupic
-        public bool KupBilet(Miejsce _miejsce, Wagon wagon, string _typUlgi, float? _ProcentUlgi, float _cena)
+        public bool KupBilet(Miejsce _miejsce, Wagon wagon, float? _ProcentUlgi, float _cena)
         {
             if (wagon.ZajmijMiejsce(_miejsce))
             {
                 if(_ProcentUlgi != null)
                 {
-                    this.Cena = ((float)_cena * (1-(float)_ProcentUlgi));
+                    Cena = ((float)_cena * (1-(float)_ProcentUlgi));
                 }
                 else
                 {
-                    this.Cena = _cena;
+                    Cena = _cena;
                 }
-                this.Status = "zakupiony";
+                WaznyOd = DateTime.Now;
+                Status = "zakupiony";
                 return true;
             }
 
             return false;
         }
 
-        public bool WygenerujBilet()
-        {
-            // TODO - implement Tranzakcja.WygenerujBilet
-            throw new NotImplementedException();
-        }
+        
 
         // True udalo sie zwrocic bilet, False - nie udalo sie zwrocic biletu
         public bool ZwrocBilet(Miejsce _miejsce, Wagon wagon)
         {
             if (wagon.ZwolnijMiejsce(_miejsce))
             {
-                this.Status = "zwrócony";
+                Status = "zwrócony";
                 return true;
             }
             return false;
@@ -80,6 +76,10 @@ namespace PolTrain.Classes
             Console.WriteLine("Procent ulgi: " + bilet.ProcentUlgi);
             Console.WriteLine("Numer biletu: " + bilet.NumerBiletu);
             Console.WriteLine("Kod QR: " + bilet.KodQR);
+            foreach(var item in Miejsca)
+            {
+                Console.WriteLine($"Miejsce numer: {item.NumerMiejsca}.");
+            }
         }
 
 
