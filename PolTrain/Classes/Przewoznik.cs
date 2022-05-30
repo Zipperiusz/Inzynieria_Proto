@@ -17,16 +17,29 @@ namespace PolTrain.Classes
             Nazwa = _nazwa;
         }
 
-        public bool EdytujHarmonogram()
+        public bool EdytujHarmonogram(Pociag pociag, Trasa trasa, Stacja stacjaPocz, Stacja stacjaKon,
+            DateTime czasPrzyjazdu, DateTime czasOdjazdu)
         {
-            // TODO - implement Przwoznik.EdytujHarmonogram
-            throw new NotImplementedException();
+            if(this.Pociagi.Contains(pociag) & pociag.Trasy.Contains(trasa) & trasa.StacjaKon == stacjaKon  & trasa.StacjaPocz == stacjaPocz)
+            {
+                stacjaPocz.CzasOdjazdu = czasOdjazdu;
+                stacjaKon.CzasPrzyjazdu = czasPrzyjazdu;
+
+                return true;
+            }
+            return false;
+
         }
 
-        public bool EdytujTrasy()
+        public bool EdytujTrasy(Pociag pociag, List<Trasa> Trasy)
         {
-            // TODO - implement Przwoznik.EdytujTrasy
-            throw new NotImplementedException();
+            if (this.Pociagi.Contains(pociag))
+            {
+                pociag.Trasy = Trasy;
+
+                return true;
+            }
+            return false;
         }
 
         public bool OpublikujPrzewoz()

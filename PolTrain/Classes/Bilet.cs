@@ -5,6 +5,8 @@ namespace PolTrain.Classes
 {
     public class Bilet
     {
+        private Miejsce miejsce;
+        private Wagon wagon;
 
         public float Cena { get; set; }
         public string TypUlgi { get; }
@@ -59,7 +61,7 @@ namespace PolTrain.Classes
         {
             if (wagon.ZwolnijMiejsce(_miejsce))
             {
-                Status = "zwrócony";
+                Status = "zwrï¿½cony";
                 return true;
             }
             return false;
