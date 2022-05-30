@@ -6,22 +6,24 @@ namespace PolTrain.Classes
     public class Trasa
     {
 
-        protected Stacja StacjaPocz { get; }
-        protected Stacja StacjaKon { get; }
-        protected float Dlugosc { get; }
-        protected int IloscKupionychBiletow { get; }
-        protected int NumerTrasy { get; }
-        protected List<Stacja> Stacje { get; }
+        public Stacja StacjaPocz { get; }
+        public Stacja StacjaKon { get; }
+        public float Dlugosc { get; }
+        public int IloscKupionychBiletow { get; }
+        public int NumerTrasy { get; }
+        public List<Stacja> Stacje { get; }
+
+        public Pociag Pociag { get; protected set; }
 
 
-        public Trasa(Stacja _stacjaPocz, Stacja _stacjaKon, float _dlugosc, int _iloscKupionychBiletow, int _numerTrasy)
+        public Trasa(Stacja _stacjaPocz, Stacja _stacjaKon, float _dlugosc, int _iloscKupionychBiletow, int _numerTrasy, Pociag _pociag)
         {
             StacjaPocz = _stacjaPocz;
             StacjaKon = _stacjaPocz;
             Dlugosc = _dlugosc;
             IloscKupionychBiletow = _iloscKupionychBiletow;
             NumerTrasy = _numerTrasy;
-
+            Pociag = _pociag;
         }
 
         public void PorownajTrasy()
