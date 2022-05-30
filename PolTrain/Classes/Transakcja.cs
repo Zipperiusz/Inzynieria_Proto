@@ -13,12 +13,14 @@ namespace PolTrain.Classes
         protected Klient Klient { get; }
         protected List<Bilet> Bilety { get; }
 
-        public Transakcja(float _koszt, int _numerTransakcji, DateTime _dataZakupu, string _metodaPlatnosci)
+        public Transakcja(float _koszt, int _numerTransakcji, DateTime _dataZakupu, string _metodaPlatnosci, Klient _klient, List<Bilet> _bilety)
         {
             Koszt = _koszt;
             NumerTransakcji = _numerTransakcji;
             DataZakupu = _dataZakupu;
             MetodaPlatnosci = _metodaPlatnosci;
+            Klient = _klient;
+            Bilety = _bilety;
         }
         
 

@@ -107,5 +107,16 @@ namespace PolTrain.Classes
         {
             return new Pociag("Pociagx", 2, 104284, CreateWagon2());
         }
+
+        public static Klient CreateKlient()
+        {
+            return new Klient("JanKowalski","jan.kowalski@gmail.com","1234",1, "Jan", "Kowalski");
+        }
+
+        /*public static Transakcja CreateTransakcja()
+        {
+            return new Transakcja("")
+        }*/
+
     }
 }
