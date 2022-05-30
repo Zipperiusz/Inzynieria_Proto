@@ -24,17 +24,17 @@ namespace PolTrain.Classes
         {
             Klient = _klient;
             MetodaPlatnosci = _metodaPlatnosci;
+            Bilety = new List<Bilet>();
         }
         public bool WygenerujBilet(Miejsce _miejsce,Wagon _wagon,float _cena)
         {
-            
-
             Bilet bilet = new Bilet();
 
+            _miejsce.Bilet = bilet;
             if(bilet.KupBilet(_miejsce, _wagon, _cena, Klient.ProcentUlgi))
             {
-                DataZakupu = DateTime.Now;
                 Bilety.Add(bilet);
+                DataZakupu = DateTime.Now;
                 return true;
             }
             return false;

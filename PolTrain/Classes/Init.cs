@@ -6,13 +6,13 @@ namespace PolTrain.Classes
     internal static class Init
     {
         /// <summary>
-        /// Zwraca listę zawierającą 20 obiektów klasy wagon.
+        /// Zwraca listę zawierającą 6 obiektów klasy wagon.
         /// 
         /// </summary>
         public static List<Wagon> CreateWagon()
         {
             
-            List<Miejsce> miejsca1 = new List<Miejsce>()
+            List<Miejsce> miejsca = new List<Miejsce>()
             {
                 new Miejsce(1, false, false),
                 new Miejsce(2, false, true),
@@ -37,19 +37,16 @@ namespace PolTrain.Classes
 
             };
 
-            //miejsca.Clear();
-            //for(int i = 0; i < 20; i++)
-            //    miejsca.Add(new Miejsce(i, false, false));
             
 
             List<Wagon> wagony = new List<Wagon>()
             {
-                new Wagon(1, "Pasażerski", 1, miejsca1),
-                new Wagon(1, "Pasażerski", 2),
-                new Wagon(2, "Pasażerski", 3),
-                new Wagon(2, "Pasażerski", 4),
-                new Wagon(2, "Pasażerski", 5),
-                new Wagon(2, "Pasażerski", 6)
+                new Wagon(1, "Pasażerski", 1, miejsca),
+                new Wagon(1, "Pasażerski", 2,miejsca),
+                new Wagon(2, "Pasażerski", 3,miejsca),
+                new Wagon(2, "Pasażerski", 4,miejsca),
+                new Wagon(2, "Pasażerski", 5,miejsca),
+                new Wagon(2, "Pasażerski", 6,miejsca)
             };
 
             return wagony;
@@ -83,10 +80,7 @@ namespace PolTrain.Classes
 
             };
 
-            //miejsca.Clear();
-            //for(int i = 0; i < 20; i++)
-            //    miejsca.Add(new Miejsce(i, false, false));
-
+            
 
             List<Wagon> wagony = new List<Wagon>()
             {
@@ -113,10 +107,7 @@ namespace PolTrain.Classes
             return new Klient("JanKowalski","jan.kowalski@gmail.com","1234",1, "Jan", "Kowalski");
         }
 
-        /*public static Transakcja CreateTransakcja()
-        {
-            return new Transakcja("")
-        }*/
+       
 
     }
 }

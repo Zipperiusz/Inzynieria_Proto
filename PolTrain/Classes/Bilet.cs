@@ -13,7 +13,7 @@ namespace PolTrain.Classes
         public float? ProcentUlgi { get; }
         public int NumerBiletu { get; }
         public string KodQR { get; }
-        public List<Miejsce> Miejsca { get; }
+        public List<Miejsce> Miejsca { get; set; }
 
         public Bilet(float _cena, string _status, DateTime _waznyOd, int _numerBiletu, List<Miejsce> _miejsca, float? _procentUlgi = null, string _kodQR = null, string _typUlgi = null)
         {
@@ -26,7 +26,9 @@ namespace PolTrain.Classes
             Miejsca = _miejsca;
         }
 
-        public Bilet() { }
+        public Bilet() {
+            Miejsca = new List<Miejsce>();
+        }
         // True udalo sie kupic , False - nie udalo sie kupic
         public bool KupBilet(Miejsce _miejsce, Wagon wagon, float _cena, float? _ProcentUlgi=null)
         {
@@ -40,6 +42,8 @@ namespace PolTrain.Classes
                 {
                     Cena = _cena;
                 }
+                
+                Miejsca.Add(_miejsce);
                 WaznyOd = DateTime.Now;
                 Status = "zakupiony";
                 return true;

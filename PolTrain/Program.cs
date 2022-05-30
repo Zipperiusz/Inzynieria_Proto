@@ -8,14 +8,12 @@ namespace PolTrain
         static void Main(string[] args)
         {
 
-            var wagon = Init.CreateWagon();
-            var pociag2 = Init.CreatePociag2();
-
-            foreach(var item in wagon)
-            {
-                Console.WriteLine(item.WolneMiejsca);
-            }
-
+            var pociag = Init.CreatePociag2();
+           
+            var klient =  Init.CreateKlient();
+            var transakcja = new Transakcja(klient, "blik");
+            var res =transakcja.WygenerujBilet(pociag.Wagony[0].Miejsca[0], pociag.Wagony[0], 1.5f);
+            Console.WriteLine(res);
         }
     }
 }
