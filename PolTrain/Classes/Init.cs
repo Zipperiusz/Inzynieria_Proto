@@ -94,17 +94,38 @@ namespace PolTrain.Classes
 
         public static Pociag CreatePociag()
         {           
-            return new Pociag("Szczeciniak", 6, 23323, CreateWagon());
+            return new Pociag("Szczeciniak", 6, 23323, CreateWagon(), CreateTrasy());
         }
 
         public static Pociag CreatePociag2()
         {
-            return new Pociag("Pociagx", 2, 104284, CreateWagon2());
+            return new Pociag("Pociagx", 2, 104284, CreateWagon2(), CreateTrasy());
         }
 
         public static Klient CreateKlient()
         {
             return new Klient("JanKowalski","jan.kowalski@gmail.com","1234",1, "Jan", "Kowalski");
+        }
+
+        public static List<Trasa> CreateTrasy()
+        {
+            //Stacja _stacjaPocz, Stacja _stacjaKon, float _dlugosc,
+            //int _iloscKupionychBiletow, int _numerTrasy, Pociag _pociag
+            List<Trasa> miejsca = new List<Trasa>()
+            {
+                new Trasa(
+                    new Stacja("Stacja1", new DateTime(2022,06,24,12,30,0), new DateTime(2022,06,24,12,35,30), 41),
+                    new Stacja("Stacja2", new DateTime(2022,06,24,15,45,30), new DateTime(2022,06,24,15,50,0), 50),
+                    250, 55, 30
+                    ),
+                new Trasa(
+                    new Stacja("Stacja J", new DateTime(2022,07,30,16,14,0), new DateTime(2022,07,30,16,16,30), 19),
+                    new Stacja("Stacja 31", new DateTime(2022,07,30,20,30,0), new DateTime(2022,07,30,20,40,30), 99),
+                    300, 41, 16
+                    )
+
+            };
+            return miejsca;
         }
 
        

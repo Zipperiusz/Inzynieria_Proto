@@ -59,9 +59,9 @@ namespace PolTrain.Classes
         // True udalo sie zwrocic bilet, False - nie udalo sie zwrocic biletu
         public bool ZwrocBilet(Miejsce _miejsce, Wagon wagon)
         {
-            if (wagon.ZwolnijMiejsce(_miejsce))
+            if (_miejsce.Zajete == true && wagon.ZwolnijMiejsce(_miejsce) )
             {
-                Status = "zwr�cony";
+                Status = "zwrocony";
                 return true;
             }
             return false;

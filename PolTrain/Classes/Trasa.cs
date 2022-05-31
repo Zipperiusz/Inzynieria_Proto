@@ -16,14 +16,13 @@ namespace PolTrain.Classes
         public Pociag Pociag { get; protected set; }
 
 
-        public Trasa(Stacja _stacjaPocz, Stacja _stacjaKon, float _dlugosc, int _iloscKupionychBiletow, int _numerTrasy, Pociag _pociag)
+        public Trasa(Stacja _stacjaPocz, Stacja _stacjaKon, float _dlugosc, int _iloscKupionychBiletow, int _numerTrasy)
         {
             StacjaPocz = _stacjaPocz;
             StacjaKon = _stacjaPocz;
             Dlugosc = _dlugosc;
             IloscKupionychBiletow = _iloscKupionychBiletow;
             NumerTrasy = _numerTrasy;
-            Pociag = _pociag;
         }
 
         public void PorownajTrasy()
