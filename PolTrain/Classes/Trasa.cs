@@ -11,7 +11,7 @@ namespace PolTrain.Classes
         public float Dlugosc { get; }
         public int IloscKupionychBiletow { get; }
         public int NumerTrasy { get; }
-        public List<Stacja> Stacje { get; }
+        public List<Stacja> Stacje { get; set; }
 
         public Pociag Pociag { get; protected set; }
 

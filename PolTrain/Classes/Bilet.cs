@@ -5,9 +5,6 @@ namespace PolTrain.Classes
 {
     public class Bilet
     {
-        private Miejsce miejsce;
-        private Wagon wagon;
-
         public float Cena { get; set; }
         public string TypUlgi { get; }
         public string Status { get; set; }
@@ -73,23 +70,17 @@ namespace PolTrain.Classes
             throw new NotImplementedException();
         }
 
-        public void ObejrzyjBilet(Bilet bilet)
+        public void ObejrzyjBilet()
         {
-            Console.WriteLine("Cena: " + bilet.Cena);
-            Console.WriteLine("Typ ulgi: " + bilet.TypUlgi);
-            Console.WriteLine("Status: " + bilet.Status);
-            Console.WriteLine("Wazny od: " + bilet.WaznyOd);
-            Console.WriteLine("Procent ulgi: " + bilet.ProcentUlgi);
-            Console.WriteLine("Numer biletu: " + bilet.NumerBiletu);
-            Console.WriteLine("Kod QR: " + bilet.KodQR);
-            foreach(var item in Miejsca)
-            {
-                Console.WriteLine($"Miejsce numer: {item.NumerMiejsca}.");
-            }
+            Console.WriteLine("Cena: " + this.Cena);
+            Console.WriteLine("Typ ulgi: " + this.TypUlgi);
+            Console.WriteLine("Status: " + this.Status);
+            Console.WriteLine("Wazny od: " + this.WaznyOd);
+            Console.WriteLine("Procent ulgi: " + this.ProcentUlgi);
+            Console.WriteLine("Numer biletu: " + this.NumerBiletu);
+            Console.WriteLine("Kod QR: " + this.KodQR);
+            
         }
-
-
-       
 
     }
 }

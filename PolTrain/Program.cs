@@ -9,14 +9,13 @@ namespace PolTrain
         {
             // INICJALIZACJA
             var pociag = Init.CreatePociag();
-           
-            
+
             var klient1 =  Init.CreateKlient();
             var klient2 = Init.CreateKlient();
             var klient3 = Init.CreateKlient();
 
             // KUPNO BILETÓW
-            var transakcja1 = new Transakcja(klient1, "blik");
+            Transakcja transakcja1 = new Transakcja(klient1, "blik");
             var transakcja2 = new Transakcja(klient2, "blik");  
             var transakcja3 = new Transakcja(klient3, "karta"); 
             var transakcja4 = new Transakcja(klient3, "karta");
@@ -48,6 +47,23 @@ namespace PolTrain
             Console.WriteLine(zwrocBilet2Raz);
 
 
+            //PRÓBA KUPIENIA, ZAKUPIONEGO WCZEŚNIEJ MIEJSCA.
+            var transakcja6 = new Transakcja(klient1, "blik");
+            var res6 = transakcja6.WygenerujBilet(pociag.Wagony[0].Miejsca[0], pociag.Wagony[0], 15f);
+            Console.WriteLine("Czy udało się kupić, wcześniej zapukione miejsce");
+            Console.WriteLine(res6);
+
+            
+            // WYŚWIETLENIE BILETÓW:
+            Console.WriteLine("Wyświetlenie 1 biletu:\n");
+            transakcja1.Bilety[0].ObejrzyjBilet();
+
+            Console.WriteLine("\nWyświetlenie 2 biletu:\n");
+            transakcja4.Bilety[0].ObejrzyjBilet();
+
+            // BILET O STATUSIE ZWRÓCONY
+            Console.WriteLine("\nWyświetlenie 3 biletu:\n");
+            transakcja5.Bilety[0].ObejrzyjBilet();
         }
     }
 }
