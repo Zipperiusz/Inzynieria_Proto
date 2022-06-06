@@ -50,7 +50,7 @@ namespace PolTrain
             //PRÓBA KUPIENIA, ZAKUPIONEGO WCZEŚNIEJ MIEJSCA.
             var transakcja6 = new Transakcja(klient1, "blik");
             var res6 = transakcja6.WygenerujBilet(pociag.Wagony[0].Miejsca[0], pociag.Wagony[0], 15f);
-            Console.WriteLine("Czy udało się kupić, wcześniej zapukione miejsce");
+            Console.WriteLine("Czy udało się kupić, wcześniej zakupione miejsce");
             Console.WriteLine(res6);
 
             
